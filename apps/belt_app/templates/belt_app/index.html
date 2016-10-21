@@ -5,22 +5,8 @@
     <title></title>
   </head>
   <body>
-    welcome
-    <div class="register">
-        <h1>Register</h1>
-        Name:<input type="text" name="name">
-        Alias: <input type="text" name="alias">
-        Email: <input type="text" name="email" >
-        Password:<input type="Password" name="password">
-        (*Password should be more than 8 characters)
-        Confirm Password:<input type="Password" name="Cpassword" value="">
-        <input type="submit"  value="Register">
-    </div>
-    <div class="login">
-      <h1>Login</h1>
-      Email: <input type="text" name="email">
-      Password:<input type="Password" name="password">
-      <input type="Submit"  value="Login">
-    </div>
+    welcome belt index
+    <h1>Welcome login {{request.session.name}} {{request.session.userid}}</h1>
+    <a href="{% url 'belt:addbook' %}">Add Book and Review</a>
   </body>
 </html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    add a book here
+    <form class="" action="{% url 'belt:addbook' %}" method="post">
+      {% csrf_token %}
+      BOOK title:<input type="text" name="book" >
+      Select author: <select  name="Author">
+        <option value="add">author name<option>
+
+      </select>
+      add new author:<input type="text" name="author_name">
+      review:<textarea name="review" rows="8" cols="40"></textarea>
+       rating: <select  name="rating">
+        <option value=1>1<option>
+        <option value=2>2<option>
+        <option value=3>3<option>
+        <option value=4>4<option>
+        <option value=5>5<option>
+
+      </select>
+      <input type="submit" value="AddBook_review">
+    </form>
+  </body>
+</html>
